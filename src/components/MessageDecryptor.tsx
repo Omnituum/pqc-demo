@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import {
   hybridDecryptToString,
   getSecretKeys,
@@ -18,6 +18,25 @@ export function MessageDecryptor({ identity, currentEnvelope }: MessageDecryptor
   const [isDecrypting, setIsDecrypting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [decryptMethod, setDecryptMethod] = useState<string | null>(null);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const decryptedRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to result on successful decryption
+  useEffect(() => {
+    if (decryptedMessage !== null && decryptedRef.current) {
+      setShowSuccess(true);
+      // Slight delay to let the DOM update
+      setTimeout(() => {
+        decryptedRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 100);
+      // Hide success state after 2 seconds
+      const timer = setTimeout(() => setShowSuccess(false), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [decryptedMessage]);
 
   const handleDecrypt = async (envelope: HybridEnvelope) => {
     if (!identity) {
@@ -107,9 +126,24 @@ export function MessageDecryptor({ identity, currentEnvelope }: MessageDecryptor
               <button
                 onClick={handleDecryptCurrent}
                 disabled={isDecrypting}
-                className="w-full py-2.5 px-4 bg-pqc-600 hover:bg-pqc-500 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+                className={`w-full py-2.5 px-4 rounded-lg text-sm font-medium transition-all duration-300 disabled:opacity-50 ${
+                  showSuccess
+                    ? 'bg-verified-600 text-white'
+                    : 'bg-pqc-600 hover:bg-pqc-500'
+                }`}
               >
-                {isDecrypting ? 'Decrypting...' : 'Decrypt Current Envelope'}
+                {isDecrypting ? (
+                  'Decrypting...'
+                ) : showSuccess ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Decrypted — see below
+                  </span>
+                ) : (
+                  'Decrypt Current Envelope'
+                )}
               </button>
             </div>
           )}
@@ -176,7 +210,7 @@ export function MessageDecryptor({ identity, currentEnvelope }: MessageDecryptor
           </button>
 
           {decryptedMessage !== null && (
-            <div className="mt-4 space-y-3 pt-4 border-t border-gray-800/30">
+            <div ref={decryptedRef} className="mt-4 space-y-3 pt-4 border-t border-gray-800/30 scroll-mt-4">
               <div className="flex items-center justify-between">
                 <span className="text-verified-400 text-sm font-medium flex items-center gap-2">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
