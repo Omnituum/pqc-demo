@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { OmniBackground } from './shared/OmniBackground';
 
 interface LandingPageProps {
   onEnterStudio: () => void;
@@ -30,11 +31,9 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
         </div>
       </div>
 
-      {/* Animated background effects */}
+      {/* Shared background - demo variant */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pqc-500/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-classical-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-nist-500/3 rounded-full blur-3xl" />
+        <OmniBackground variant="demo" />
       </div>
 
       {/* Header - with top margin for fixed banner */}
