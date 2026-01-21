@@ -29,7 +29,7 @@ export function MessageDecryptor({ identity, currentEnvelope }: MessageDecryptor
       setTimeout(() => {
         decryptedRef.current?.scrollIntoView({
           behavior: 'smooth',
-          block: 'start',
+          block: 'center',
         });
       }, 100);
       // Hide success state after 2 seconds
