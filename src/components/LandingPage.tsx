@@ -68,14 +68,11 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
       <section className="relative py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex flex-col items-center gap-1 px-5 py-3 rounded-2xl bg-nist-900/30 border border-nist-700/30 mb-8">
-            <div className="flex items-center gap-2 text-nist-300 text-sm font-medium">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              Implements NIST FIPS 203 (ML-KEM-768)
-            </div>
-            <span className="text-nist-400/60 text-xs">Pre-certification</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-nist-900/30 border border-nist-700/30 text-nist-300 text-sm font-medium mb-8">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            Implements NIST FIPS 203 (ML-KEM-768) · Pre-certification
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
@@ -88,7 +85,7 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
 
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
             Hybrid encryption combining <span className="text-classical-400">X25519</span> + <span className="text-pqc-400">Kyber ML-KEM-768</span>.
-            No servers. No blockchain. No trust required.
+            No servers. No blockchain. No third-party trust.
             <span className="text-white font-medium"> Your keys never leave your device.</span>
           </p>
 
