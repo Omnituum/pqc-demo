@@ -41,23 +41,13 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
       <header className="relative border-b border-gray-800/30 bg-navy-900/50 backdrop-blur-xl mt-10">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-classical-500 via-pqc-500 to-nist-500 p-[2px]">
-                <div className="w-full h-full rounded-[10px] bg-navy-950 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-pqc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="2" fill="currentColor" />
-                    <circle cx="12" cy="4" r="1.5" />
-                    <circle cx="12" cy="20" r="1.5" />
-                    <circle cx="4" cy="12" r="1.5" />
-                    <circle cx="20" cy="12" r="1.5" />
-                    <path d="M12 4v16M4 12h16" strokeOpacity="0.3" />
-                  </svg>
-                </div>
-              </div>
-              <span className="text-xl font-semibold">
-                <span className="text-white">Omnituum</span>
-              </span>
-            </div>
+            <a href="https://omnituum.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <img
+                src="/omnituum-text-logo.png"
+                alt="Omnituum"
+                className="h-10 w-auto"
+              />
+            </a>
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a>
               <a href="#standards" className="text-gray-400 hover:text-white transition-colors">Standards</a>
