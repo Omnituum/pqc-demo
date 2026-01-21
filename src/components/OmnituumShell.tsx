@@ -137,22 +137,19 @@ Omnituum is pure cryptography — no intermediaries.`,
                   </svg>
                 </button>
               )}
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-classical-500 via-pqc-500 to-nist-500 p-[2px] animate-glow-pqc">
-                <div className="w-full h-full rounded-[10px] bg-navy-950 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-pqc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="2" fill="currentColor" />
-                    <circle cx="12" cy="4" r="1.5" />
-                    <circle cx="12" cy="20" r="1.5" />
-                    <circle cx="4" cy="12" r="1.5" />
-                    <circle cx="20" cy="12" r="1.5" />
-                    <circle cx="6" cy="6" r="1" />
-                    <circle cx="18" cy="6" r="1" />
-                    <circle cx="6" cy="18" r="1" />
-                    <circle cx="18" cy="18" r="1" />
-                    <path d="M12 4v16M4 12h16M6 6l12 12M18 6L6 18" strokeOpacity="0.3" />
-                  </svg>
-                </div>
-              </div>
+              <a
+                href="https://omnituum.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl overflow-hidden hover:opacity-80 transition-opacity"
+                title="Omnituum"
+              >
+                <img
+                  src="/omnituum-icon.png"
+                  alt="Omnituum"
+                  className="w-full h-full object-cover"
+                />
+              </a>
               <div>
                 <h1 className="text-xl font-semibold tracking-tight">
                   <span className="text-white">Omnituum</span>
@@ -313,28 +310,26 @@ Omnituum is pure cryptography — no intermediaries.`,
       </section>
 
       {/* Footer */}
-      <footer className="relative border-t border-gray-800/30 py-10 px-4">
+      <footer className="relative border-t border-gray-800/30 py-8 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2 text-sm text-gray-500">
-              <span className="text-classical-500">X25519</span>
-              <span className="text-gray-700">+</span>
-              <span className="text-pqc-500">Kyber ML-KEM-768</span>
-              <span className="text-gray-700">+</span>
-              <span className="text-verified-500">XSalsa20-Poly1305</span>
-            </div>
-            <p className="text-gray-600 text-sm">
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-gray-500 text-sm">
               <span className="text-white font-medium">Omnituum PQC Studio</span>
-              <span className="mx-2 text-gray-700">|</span>
-              Post-Quantum Cryptography Platform
+              <span className="mx-2 text-gray-700">—</span>
+              <span className="text-gray-400">Demonstration Environment</span>
             </p>
-          </div>
-          <div className="mt-6 pt-6 border-t border-gray-800/20 text-center">
-            <p className="text-[10px] text-gray-600 leading-relaxed max-w-xl mx-auto">
-              <span className="text-amber-500/80 font-semibold">DEMO ENVIRONMENT</span> — This is a showcase application.
-              All identities and encrypted messages are stored locally in your browser.
-              Clearing browser data will permanently delete your vault unless exported.
-              Not intended for production messaging.
+            <div className="flex items-center gap-2 text-xs text-gray-600">
+              <span className="text-classical-500/70">X25519</span>
+              <span className="text-gray-700">+</span>
+              <span className="text-pqc-500/70">ML-KEM-768</span>
+              <span className="text-gray-700">+</span>
+              <span className="text-verified-500/70">XSalsa20-Poly1305</span>
+            </div>
+            <p className="text-[10px] text-gray-600 leading-relaxed max-w-lg text-center mt-2">
+              All cryptographic operations run locally in your browser. Data stored in localStorage.
+              <a href="https://omnituum.com" target="_blank" rel="noopener noreferrer" className="text-pqc-400/80 hover:text-pqc-300 ml-1">
+                omnituum.com
+              </a>
             </p>
           </div>
         </div>
