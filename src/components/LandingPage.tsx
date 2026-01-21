@@ -410,16 +410,13 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
       <footer className="relative border-t border-gray-800/30 py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-classical-500 via-pqc-500 to-nist-500 p-[1px]">
-                <div className="w-full h-full rounded-[7px] bg-navy-950 flex items-center justify-center">
-                  <svg className="w-4 h-4 text-pqc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="2" fill="currentColor" />
-                  </svg>
-                </div>
-              </div>
-              <span className="text-white font-medium">Omnituum</span>
-            </div>
+            <a href="https://omnituum.com" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/omnituum-text-logo.png"
+                alt="Omnituum"
+                className="h-8 w-auto"
+              />
+            </a>
             <div className="flex items-center gap-2 text-sm text-gray-500">
               <span className="text-classical-500">X25519</span>
               <span className="text-gray-700">+</span>
