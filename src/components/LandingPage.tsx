@@ -114,6 +114,19 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
         </div>
       </section>
 
+      {/* What This Is / Isn't - Legal + Cognitive Protection */}
+      <section className="relative py-12 px-4">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-navy-900/30 rounded-xl border border-gray-800/30 p-6 text-center">
+            <p className="text-gray-400 text-sm leading-relaxed">
+              <span className="text-white font-medium">Demonstration Environment</span> — This studio demonstrates
+              cryptographic primitives and envelope composition only. It is not a messaging service,
+              identity provider, or production system.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section id="features" className="relative py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -367,6 +380,23 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
         </div>
       </section>
 
+      {/* Next Step Bridge */}
+      <section className="relative py-12 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-gray-400 text-sm">
+            <span className="text-white font-medium">Want this in a real system?</span>{' '}
+            Omnituum powers production deployments through the{' '}
+            <a href="https://loggie.io" target="_blank" rel="noopener noreferrer" className="text-pqc-400 hover:text-pqc-300 transition-colors">
+              Loggie platform
+            </a>{' '}
+            and{' '}
+            <a href="https://omnituum.com/#pilot" className="text-pqc-400 hover:text-pqc-300 transition-colors">
+              select pilot integrations
+            </a>.
+          </p>
+        </div>
+      </section>
+
       {/* Waitlist Section */}
       <section id="waitlist" className="relative py-20 px-4">
         <div className="max-w-2xl mx-auto text-center">
@@ -419,12 +449,22 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
                 className="h-12 w-auto"
               />
             </a>
-            <div className="flex items-center gap-2 text-sm text-gray-500">
-              <span className="text-classical-500">X25519</span>
-              <span className="text-gray-700">+</span>
-              <span className="text-pqc-500">Kyber ML-KEM-768</span>
-              <span className="text-gray-700">+</span>
-              <span className="text-verified-500">XSalsa20-Poly1305</span>
+            <div className="flex items-center gap-4 text-sm">
+              <div className="flex items-center gap-2 text-gray-500">
+                <span className="text-classical-500">X25519</span>
+                <span className="text-gray-700">+</span>
+                <span className="text-pqc-500">ML-KEM-768</span>
+                <span className="text-gray-700">+</span>
+                <span className="text-verified-500">XSalsa20-Poly1305</span>
+              </div>
+              <a
+                href="https://github.com/omnituum/pqc-shared#envelope-format"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-400 transition-colors text-xs"
+              >
+                View envelope schema →
+              </a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800/20 text-center space-y-3">
