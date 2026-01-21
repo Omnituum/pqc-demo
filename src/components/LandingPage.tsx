@@ -68,11 +68,14 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
       <section className="relative py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-nist-900/30 border border-nist-700/30 text-nist-300 text-sm font-medium mb-8">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            NIST FIPS 203 Compliant
+          <div className="inline-flex flex-col items-center gap-1 px-5 py-3 rounded-2xl bg-nist-900/30 border border-nist-700/30 mb-8">
+            <div className="flex items-center gap-2 text-nist-300 text-sm font-medium">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              Implements NIST FIPS 203 (ML-KEM-768)
+            </div>
+            <span className="text-nist-400/60 text-xs">Pre-certification</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
@@ -119,7 +122,7 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
       <section id="features" className="relative py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Two Products. One Mission.</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Two Tools. One Security Model.</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Experience post-quantum cryptography today with tools designed for developers, researchers, and security professionals.
             </p>
@@ -299,6 +302,9 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
               <p className="text-gray-500 text-sm">Key Derivation</p>
             </div>
           </div>
+          <p className="text-center text-gray-600 text-xs mt-8">
+            Implements NIST-standardized algorithms. Formal validation is pending and not implied.
+          </p>
         </div>
       </section>
 
@@ -370,7 +376,7 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Join the Waitlist</h2>
           <p className="text-gray-400 mb-8">
-            Be the first to know when Omnituum launches production-ready PQC tools for enterprise.
+            Be the first to know when Omnituum launches production-grade post-quantum cryptographic tooling.
           </p>
 
           {submitted ? (
@@ -425,8 +431,11 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
               <span className="text-verified-500">XSalsa20-Poly1305</span>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-800/20 text-center">
-            <p className="text-gray-600 text-sm">
+          <div className="mt-8 pt-8 border-t border-gray-800/20 text-center space-y-3">
+            <p className="text-gray-600 text-xs max-w-xl mx-auto">
+              Omnituum provides cryptographic software components implementing NIST-standardized algorithms. It is not itself FIPS-certified.
+            </p>
+            <p className="text-gray-500 text-sm">
               Security that endures. Performance that feels invisible.
             </p>
           </div>
