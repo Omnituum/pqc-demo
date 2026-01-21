@@ -21,12 +21,13 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
       {/* Controlled Access Banner */}
       <div className="fixed top-0 left-0 right-0 z-[60] bg-amber-900/90 border-b border-amber-700/50 px-4 py-2.5">
         <div className="max-w-6xl mx-auto flex items-center justify-center gap-3 text-center">
-          <svg className="w-4 h-4 text-amber-300 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+          <svg className="w-4 h-4 text-amber-300 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
           </svg>
           <p className="text-amber-100 text-xs sm:text-sm font-medium">
-            <strong>Controlled Evaluation Environment</strong>
-            <span className="hidden sm:inline"> — Access is granted to vetted partners and pilot participants only.</span>
+            <strong>Demonstration Environment</strong>
+            <span className="hidden sm:inline"> — Production deployments available via vetted pilot access</span>
           </p>
         </div>
       </div>
