@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { OmniBackground } from './shared/OmniBackground';
+import { OmniDemoNavbar } from './shared/OmniDemoNavbar';
 
 interface LandingPageProps {
   onEnterStudio: () => void;
@@ -18,57 +19,19 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-navy-950 via-[#080c14] to-navy-950 text-white">
-      {/* Controlled Access Banner */}
-      <div className="fixed top-0 left-0 right-0 z-[60] bg-amber-900/90 border-b border-amber-700/50 px-4 py-2.5">
-        <div className="max-w-6xl mx-auto flex items-center justify-center gap-3 text-center">
-          <svg className="w-4 h-4 text-amber-300 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <path d="m9 12 2 2 4-4"/>
-          </svg>
-          <p className="text-amber-100 text-xs sm:text-sm font-medium">
-            <strong>Demonstration Environment</strong>
-            <span className="hidden sm:inline"> — Production deployments available via vetted pilot access</span>
-          </p>
-        </div>
-      </div>
-
       {/* Shared background - demo variant */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <OmniBackground variant="demo" />
       </div>
 
-      {/* Header - with top margin for fixed banner */}
-      <header className="relative border-b border-gray-800/30 bg-navy-900/50 backdrop-blur-xl mt-10">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <a href="https://omnituum.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
-              <img
-                src="/omnituum-text-logo.png"
-                alt="Omnituum"
-                className="h-12 md:h-14 w-auto"
-              />
-            </a>
-            <nav className="hidden md:flex items-center gap-6 text-sm">
-              <a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a>
-              <a href="#standards" className="text-gray-400 hover:text-white transition-colors">Standards</a>
-              <a href="#why" className="text-gray-400 hover:text-white transition-colors">Why PQC</a>
-              <a href="#waitlist" className="text-gray-400 hover:text-white transition-colors">Waitlist</a>
-            </nav>
-            <button
-              onClick={onEnterStudio}
-              className="px-4 py-2 bg-pqc-600 hover:bg-pqc-500 rounded-lg text-sm font-medium transition-colors"
-            >
-              Try Demo
-            </button>
-          </div>
-        </div>
-      </header>
+      {/* Demo navbar (banner + header + mobile menu) */}
+      <OmniDemoNavbar onEnterStudio={onEnterStudio} />
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4">
+      <section id="hero" className="relative py-24 px-4 pt-28">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-nist-900/30 border border-nist-700/30 text-nist-300 text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-nist-900/30 border border-nist-700/30 text-nist-300 text-sm font-medium mt-6 mb-8">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
@@ -445,9 +408,9 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <a href="https://omnituum.com" target="_blank" rel="noopener noreferrer">
               <img
-                src="/omnituum-text-logo.png"
+                src="/omnituum-with-tag-line-footer.png"
                 alt="Omnituum"
-                className="h-12 w-auto"
+                className="h-11 w-auto"
               />
             </a>
             <div className="flex items-center gap-4 text-sm">
