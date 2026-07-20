@@ -1,7 +1,7 @@
 /**
  * Omnituum PQC Studio
  *
- * A post-quantum cryptography platform with hybrid X25519 + Kyber ML-KEM-768 encryption
+ * A post-quantum cryptography platform with hybrid X25519 + Kyber ML-KEM-1024 encryption
  * and secure identity vault management.
  *
  * @packageDocumentation

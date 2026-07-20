@@ -55,7 +55,7 @@ export function OmnituumShell({ children, currentApp = 'studio', kyberStatus = '
       content: `Omnituum combines two encryption schemes:
 
 • **X25519** — The gold-standard elliptic curve used today
-• **Kyber ML-KEM-768** — NIST-approved post-quantum algorithm
+• **Kyber ML-KEM-1024** — NIST-standardized post-quantum algorithm (FIPS 203)
 
 Together, they create defense-in-depth: even if one scheme is broken, your data stays protected.`,
       icon: (
@@ -225,7 +225,7 @@ Omnituum is pure cryptography — no intermediaries.`,
                   : kyberStatus === 'unavailable' ? 'bg-red-400'
                   : 'bg-gray-400 animate-pulse'
                 }`} />
-                {kyberStatus === 'available' && 'ML-KEM-768'}
+                {kyberStatus === 'available' && 'ML-KEM-1024'}
                 {kyberStatus === 'unavailable' && 'Unavailable'}
                 {kyberStatus === 'checking' && 'Loading...'}
               </div>
@@ -322,7 +322,7 @@ Omnituum is pure cryptography — no intermediaries.`,
             <div className="flex items-center gap-2 text-xs text-gray-600">
               <span className="text-classical-500/70">X25519</span>
               <span className="text-gray-700">+</span>
-              <span className="text-pqc-500/70">ML-KEM-768</span>
+              <span className="text-pqc-500/70">ML-KEM-1024</span>
               <span className="text-gray-700">+</span>
               <span className="text-verified-500/70">XSalsa20-Poly1305</span>
             </div>

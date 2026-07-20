@@ -180,7 +180,7 @@ function OverviewContent() {
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="px-2 py-1 bg-classical-900/30 text-classical-400 text-xs rounded">X25519</span>
-            <span className="px-2 py-1 bg-pqc-900/30 text-pqc-400 text-xs rounded">Kyber ML-KEM-768</span>
+            <span className="px-2 py-1 bg-pqc-900/30 text-pqc-400 text-xs rounded">Kyber ML-KEM-1024</span>
             <span className="px-2 py-1 bg-verified-900/30 text-verified-400 text-xs rounded">XSalsa20-Poly1305</span>
           </div>
         </div>
@@ -215,7 +215,7 @@ function OverviewContent() {
           </tr>
           <tr className="border-b border-gray-800/50">
             <td className="py-2">Quantum attacks</td>
-            <td className="py-2 text-pqc-400">Kyber ML-KEM-768</td>
+            <td className="py-2 text-pqc-400">Kyber ML-KEM-1024</td>
           </tr>
           <tr className="border-b border-gray-800/50">
             <td className="py-2">Harvest-now-decrypt-later</td>
@@ -291,7 +291,7 @@ function PQCContent() {
           <ul className="text-sm text-gray-300 mt-3 space-y-1">
             <li><span className="text-gray-500">Type:</span> Key encapsulation</li>
             <li><span className="text-gray-500">Security:</span> Lattice problems (Module-LWE)</li>
-            <li><span className="text-gray-500">Omnituum uses:</span> <span className="text-pqc-400">ML-KEM-768</span></li>
+            <li><span className="text-gray-500">Omnituum uses:</span> <span className="text-pqc-400">ML-KEM-1024</span></li>
           </ul>
         </div>
 
@@ -331,9 +331,9 @@ function PQCContent() {
             <td className="py-2 text-classical-400">Classical</td>
           </tr>
           <tr>
-            <td className="py-2 text-pqc-400">Kyber-768</td>
-            <td className="py-2">1,184 bytes</td>
-            <td className="py-2">2,400 bytes</td>
+            <td className="py-2 text-pqc-400">Kyber-1024</td>
+            <td className="py-2">1,568 bytes</td>
+            <td className="py-2">3,168 bytes</td>
             <td className="py-2 text-pqc-400">Post-Quantum</td>
           </tr>
         </tbody>
@@ -349,7 +349,7 @@ function HybridContent() {
 
       <p className="text-gray-300 mb-6">
         Omnituum implements hybrid encryption combining classical X25519 with post-quantum
-        Kyber ML-KEM-768. This provides security against both current and future threats.
+        Kyber ML-KEM-1024. This provides security against both current and future threats.
       </p>
 
       <h2 className="text-lg font-semibold text-white mt-6 mb-3">Why Hybrid?</h2>
@@ -375,11 +375,11 @@ function HybridContent() {
           </ul>
         </div>
         <div className="bg-pqc-900/20 border border-pqc-700/30 rounded-lg p-4">
-          <h3 className="text-pqc-400 font-semibold mb-2">Kyber ML-KEM-768</h3>
+          <h3 className="text-pqc-400 font-semibold mb-2">Kyber ML-KEM-1024</h3>
           <ul className="text-xs text-gray-300 space-y-1">
-            <li>Public Key: 1,184 bytes (base64)</li>
-            <li>Secret Key: 2,400 bytes (base64)</li>
-            <li>Security: ~192-bit post-quantum</li>
+            <li>Public Key: 1,568 bytes (base64)</li>
+            <li>Secret Key: 3,168 bytes (base64)</li>
+            <li>Security: NIST Category 5 (~256-bit post-quantum)</li>
           </ul>
         </div>
       </div>

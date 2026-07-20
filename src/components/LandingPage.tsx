@@ -35,7 +35,7 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            Implements NIST FIPS 203 (ML-KEM-768) · Pre-certification
+            ML-KEM-1024 — algorithm standardized in FIPS 203 · Implementation not FIPS-validated
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
@@ -47,7 +47,7 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
           </h1>
 
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Hybrid encryption combining <span className="text-classical-400">X25519</span> + <span className="text-pqc-400">Kyber ML-KEM-768</span>.
+            Hybrid encryption combining <span className="text-classical-400">X25519</span> + <span className="text-pqc-400">Kyber ML-KEM-1024</span>.
             No servers. No blockchain. No third-party trust.
             <span className="text-white font-medium"> Your keys never leave your device.</span>
           </p>
@@ -70,7 +70,7 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
           {/* Tech Stack Pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 mt-12">
             <span className="px-3 py-1.5 bg-classical-900/30 border border-classical-700/30 rounded-full text-classical-400 text-xs font-medium">X25519 ECDH</span>
-            <span className="px-3 py-1.5 bg-pqc-900/30 border border-pqc-700/30 rounded-full text-pqc-400 text-xs font-medium">Kyber ML-KEM-768</span>
+            <span className="px-3 py-1.5 bg-pqc-900/30 border border-pqc-700/30 rounded-full text-pqc-400 text-xs font-medium">Kyber ML-KEM-1024</span>
             <span className="px-3 py-1.5 bg-verified-900/30 border border-verified-700/30 rounded-full text-verified-400 text-xs font-medium">XSalsa20-Poly1305</span>
             <span className="px-3 py-1.5 bg-gray-800 border border-gray-700/30 rounded-full text-gray-400 text-xs font-medium">AES-256-GCM</span>
             <span className="px-3 py-1.5 bg-gray-800 border border-gray-700/30 rounded-full text-gray-400 text-xs font-medium">PBKDF2-SHA256</span>
@@ -328,7 +328,7 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-pqc-400 text-sm font-medium w-32">Quantum attacks</span>
-                  <span className="text-gray-300 text-sm">Kyber ML-KEM-768</span>
+                  <span className="text-gray-300 text-sm">Kyber ML-KEM-1024</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-nist-400 text-sm font-medium w-32">Data tampering</span>
@@ -417,7 +417,7 @@ export function LandingPage({ onEnterStudio }: LandingPageProps) {
               <div className="flex items-center gap-2 text-gray-500">
                 <span className="text-classical-500">X25519</span>
                 <span className="text-gray-700">+</span>
-                <span className="text-pqc-500">ML-KEM-768</span>
+                <span className="text-pqc-500">ML-KEM-1024</span>
                 <span className="text-gray-700">+</span>
                 <span className="text-verified-500">XSalsa20-Poly1305</span>
               </div>

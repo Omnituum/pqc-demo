@@ -73,7 +73,7 @@ function App() {
           </h2>
 
           <p className="text-gray-400 text-lg mb-4 leading-relaxed max-w-2xl mx-auto">
-            Hybrid encryption combining classical X25519 with post-quantum Kyber ML-KEM-768.
+            Hybrid encryption combining classical X25519 with post-quantum Kyber ML-KEM-1024.
             Secure against both today's computers and tomorrow's quantum threats.
           </p>
 
@@ -93,7 +93,7 @@ function App() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
-              Kyber ML-KEM-768
+              Kyber ML-KEM-1024
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-verified-900/20 border border-verified-700/30 rounded-lg text-verified-300">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,7 +163,7 @@ function App() {
             </div>
             <h3 className="text-sm font-semibold mb-2 text-white">Future-Locked</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Kyber ML-KEM-768 secured. X25519 compatible. Designed for today and tomorrow.
+              Kyber ML-KEM-1024 secured. X25519 compatible. Designed for today and tomorrow.
             </p>
           </div>
 
