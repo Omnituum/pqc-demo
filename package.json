@@ -11,7 +11,7 @@
     "lint": "eslint src --ext ts,tsx"
   },
   "dependencies": {
-    "@omnituum/pqc-shared": "workspace:*",
+    "@omnituum/pqc-shared": "0.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

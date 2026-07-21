@@ -1,0 +1,10 @@
+packages:
+  - '.'
+# pqc-shared@0.7.0 (npm) depends on github:Omnituum/envelope-registry#v0.2.0,
+# which modern pnpm blocks as an exotic subdep and whose prepare build must be
+# allowed. Both overrides become unnecessary once envelope-registry is
+# published to npm and pqc-shared depends on it by version.
+blockExoticSubdeps: false
+allowBuilds:
+  '@omnituum/envelope-registry@https://codeload.github.com/Omnituum/envelope-registry/tar.gz/da4eabcd85a039028a0469ec8acb6aaba3e314ed': true
+  esbuild: false
